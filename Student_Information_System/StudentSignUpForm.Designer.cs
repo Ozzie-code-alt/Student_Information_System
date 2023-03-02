@@ -36,14 +36,15 @@
             this.txtCourse = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.StudentSignDGV = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentSignDGV)).BeginInit();
             this.panel1.SuspendLayout();
@@ -113,6 +114,7 @@
             // MainPanel
             // 
             this.MainPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.MainPanel.Controls.Add(this.btnDelete);
             this.MainPanel.Controls.Add(this.btnEdit);
             this.MainPanel.Controls.Add(this.btnAdd);
             this.MainPanel.Controls.Add(this.txtEmail);
@@ -133,22 +135,33 @@
             this.MainPanel.TabIndex = 7;
             this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
             // 
-            // label5
+            // btnEdit
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 248);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Phone Number :";
+            this.btnEdit.Location = new System.Drawing.Point(23, 368);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 12;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // txtPhone
+            // btnAdd
             // 
-            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPhone.Location = new System.Drawing.Point(87, 246);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(100, 20);
-            this.txtPhone.TabIndex = 8;
+            this.btnAdd.Location = new System.Drawing.Point(211, 368);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Location = new System.Drawing.Point(47, 286);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(140, 20);
+            this.txtEmail.TabIndex = 10;
             // 
             // label6
             // 
@@ -159,32 +172,22 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Email :";
             // 
-            // txtEmail
+            // txtPhone
             // 
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Location = new System.Drawing.Point(47, 286);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(140, 20);
-            this.txtEmail.TabIndex = 10;
+            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPhone.Location = new System.Drawing.Point(87, 246);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(100, 20);
+            this.txtPhone.TabIndex = 8;
             // 
-            // btnAdd
+            // label5
             // 
-            this.btnAdd.Location = new System.Drawing.Point(210, 365);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 11;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(32, 365);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnEdit.TabIndex = 12;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 248);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Phone Number :";
             // 
             // StudentSignDGV
             // 
@@ -193,6 +196,7 @@
             this.StudentSignDGV.Name = "StudentSignDGV";
             this.StudentSignDGV.Size = new System.Drawing.Size(381, 368);
             this.StudentSignDGV.TabIndex = 8;
+            this.StudentSignDGV.SelectionChanged += new System.EventHandler(this.StudentSignDGV_SelectionChanged);
             // 
             // panel1
             // 
@@ -202,6 +206,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(425, 450);
             this.panel1.TabIndex = 9;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(116, 368);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 13;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // StudentSignUpForm
             // 
@@ -240,5 +254,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView StudentSignDGV;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

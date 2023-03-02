@@ -75,10 +75,61 @@ namespace Student_Information_System
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string txtQuery = "insert into StudentSignUp (StudentName, StudentID,Course,PhoneNumber,Email) values ('"+txtStudentName.Text+"', '"+txtStudentID.Text+"', '"+txtCourse.Text+"', '"+txtPhone.Text+"', '"+txtEmail.Text+"')";
+            string txtQuery = "insert into StudentSignUp (StudentName, StudentID, Course, PhoneNumber, Email) values ('"+txtStudentName.Text+"', '"+txtStudentID.Text+"', '"+txtCourse.Text+"', '"+txtPhone.Text+"', '"+txtEmail.Text+"')";
             ExecuteQuery(txtQuery);
             LoadData();
-            MessageBox.Show("Value Added");
+            MessageBox.Show("Value Added.");
+
+            txtStudentName.Clear();
+            txtStudentID.Clear();
+            txtCourse.Clear();
+            txtPhone.Clear();
+            txtEmail.Clear();
+        }
+
+        private void StudentSignDGV_SelectionChanged(object sender, EventArgs e)
+        {
+            if(StudentSignDGV.SelectedRows.Count > 0)
+            {
+                txtStudentName.Text = StudentSignDGV.SelectedRows[0].Cells[0].Value.ToString();
+                txtStudentID.Text = StudentSignDGV.SelectedRows[0].Cells[1].Value.ToString();
+                txtCourse.Text = StudentSignDGV.SelectedRows[0].Cells[2].Value.ToString();
+                txtPhone.Text = StudentSignDGV.SelectedRows[0].Cells[3].Value.ToString();
+                txtEmail.Text = StudentSignDGV.SelectedRows[0].Cells[4].Value.ToString();
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "update StudentSignUp set StudentName = '" + txtStudentName.Text + "', StudentID = '" + txtStudentID.Text + "', Course = '" + txtCourse.Text +
+                "', PhoneNumber = '" + txtPhone.Text + "', Email = '" + txtEmail.Text + "'";
+
+            ExecuteQuery(txtQuery);
+            LoadData();
+
+            MessageBox.Show("Value Edited.");
+
+            txtStudentName.Clear();
+            txtStudentID.Clear();
+            txtCourse.Clear();
+            txtPhone.Clear();
+            txtEmail.Clear();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string txtQuery = "delete from StudentSignUp where StudentName = '" + txtStudentName.Text + "'";
+
+            ExecuteQuery(txtQuery);
+            LoadData();
+
+            MessageBox.Show("Value Deleted.");
+
+            txtStudentName.Clear();
+            txtStudentID.Clear();
+            txtCourse.Clear();
+            txtPhone.Clear();
+            txtEmail.Clear();
         }
     }
 }

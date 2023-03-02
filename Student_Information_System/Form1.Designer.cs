@@ -44,9 +44,9 @@
             // 
             // StudentSignup
             // 
-            this.StudentSignup.Location = new System.Drawing.Point(348, 244);
+            this.StudentSignup.Location = new System.Drawing.Point(330, 245);
             this.StudentSignup.Name = "StudentSignup";
-            this.StudentSignup.Size = new System.Drawing.Size(75, 23);
+            this.StudentSignup.Size = new System.Drawing.Size(99, 23);
             this.StudentSignup.TabIndex = 1;
             this.StudentSignup.Text = "Student Signup";
             this.StudentSignup.UseVisualStyleBackColor = true;
