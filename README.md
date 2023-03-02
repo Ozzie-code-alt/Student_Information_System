@@ -6,3 +6,4 @@
 - [x] Link SQLITE Add datagrid View - add one example 
 - [ ] add Edit Button
 - [ ] Add Delete Button
+- [ ] Edit front page
