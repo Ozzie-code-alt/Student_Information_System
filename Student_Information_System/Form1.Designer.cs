@@ -34,12 +34,18 @@
             // 
             // StudentSignup
             // 
+<<<<<<< HEAD
             this.StudentSignup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(0)))), ((int)(((byte)(130)))));
             this.StudentSignup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.StudentSignup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
             this.StudentSignup.Location = new System.Drawing.Point(556, 321);
             this.StudentSignup.Name = "StudentSignup";
             this.StudentSignup.Size = new System.Drawing.Size(107, 50);
+=======
+            this.StudentSignup.Location = new System.Drawing.Point(330, 245);
+            this.StudentSignup.Name = "StudentSignup";
+            this.StudentSignup.Size = new System.Drawing.Size(99, 23);
+>>>>>>> edcc4c2efc04978da103c81fb43886262bb6e454
             this.StudentSignup.TabIndex = 1;
             this.StudentSignup.Text = "Student Signup";
             this.StudentSignup.UseVisualStyleBackColor = false;
