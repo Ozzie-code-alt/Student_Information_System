@@ -26,5 +26,11 @@ namespace Student_Information_System
           studentSignUp.Show();
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            attendanceForm attendanceForm = new attendanceForm();
+            attendanceForm.Show();
+        }
     }
 }
