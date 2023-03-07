@@ -7,3 +7,4 @@
 - [ ] add Edit Button
 - [ ] Add Delete Button
 - [ ] Edit front page
+- [ ] Edit / Add Value to Combo Boxes
